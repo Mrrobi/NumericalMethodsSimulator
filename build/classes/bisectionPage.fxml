@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="700.0" styleClass="bisec" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biControll">
+   <children>
+      <TextField fx:id="TF1" accessibleHelp="Enter The Equation" accessibleRoleDescription="Enter The Equation" accessibleText="Enter The Equation" focusTraversable="false" layoutX="110.0" layoutY="7.0" onMouseClicked="#biPlay" prefHeight="37.0" prefWidth="584.0" promptText="Enter The Equation">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TextField>
+      <Label layoutX="14.0" layoutY="7.0" prefHeight="37.0" prefWidth="96.0" text="Equation:">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <Button fx:id="play" layoutX="668.0" layoutY="83.0" mnemonicParsing="false" onAction="#biStart" prefHeight="25.0" prefWidth="25.0" styleClass="btn-play" stylesheets="@style.css">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Pane fx:id="pane1" layoutX="300.0" layoutY="230.0" prefHeight="100.0" prefWidth="100.0" styleClass="pane-loading" stylesheets="@style.css" />
+      <Label layoutX="14.0" layoutY="47.0" prefHeight="31.0" prefWidth="96.0" text="1st Guess:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <Label layoutX="14.0" layoutY="80.0" prefHeight="31.0" prefWidth="96.0" text="2nd Guess:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Label>
+      <TextField fx:id="TF2" layoutX="110.0" layoutY="50.0" onMouseClicked="#biPlay" prefHeight="25.0" prefWidth="100.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TextField>
+      <TextField fx:id="TF3" layoutX="110.0" layoutY="83.0" onMouseClicked="#biPlay" prefHeight="25.0" prefWidth="100.0">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TextField>
+      <Pane fx:id="pane4" layoutX="212.0" layoutY="48.0" prefHeight="31.0" prefWidth="488.0">
+         <children>
+            <Label layoutX="156.0" layoutY="-1.0" prefHeight="31.0" prefWidth="210.0" text="Threshold (True Error):" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="62.0" text="Root:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <TextField fx:id="TF4" layoutX="53.0" layoutY="2.0" onMouseClicked="#biPlay" prefHeight="25.0" prefWidth="87.0">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </TextField>
+            <TextField fx:id="TF5" layoutX="366.0" layoutY="2.0" onMouseClicked="#biPlay" prefHeight="25.0" prefWidth="108.0">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane fx:id="pane5" layoutX="212.0" layoutY="80.0" prefHeight="31.0" prefWidth="423.0">
+         <children>
+            <Label layoutY="-1.0" prefHeight="31.0" prefWidth="287.0" text="Threshold (Approximate Error):" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Label>
+            <TextField fx:id="TF6" layoutX="287.0" layoutY="2.0" onMouseClicked="#biPlay" prefHeight="25.0" prefWidth="118.0">
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </TextField>
+         </children>
+      </Pane>
+      <Pane fx:id="pane3" layoutX="14.0" layoutY="280.0" prefHeight="280.0" prefWidth="673.0">
+         <children>
+            <TextArea fx:id="TA2" editable="false" prefHeight="280.0" prefWidth="673.0">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <Pane fx:id="pane2" layoutX="14.0" layoutY="119.0" prefHeight="150.0" prefWidth="257.0" visible="false">
+         <children>
+            <TextArea fx:id="TA1" editable="false" layoutY="1.0" prefHeight="150.0" prefWidth="255.0">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <Button fx:id="back" layoutX="639.0" layoutY="83.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="25.0" styleClass="btn-back" stylesheets="@style.css">
+         <font>
+            <Font name="Arial Bold" size="11.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <Pane fx:id="pane6" layoutX="212.0" layoutY="48.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <CheckBox fx:id="cb1" layoutX="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="I know True Root">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb2" layoutX="14.0" layoutY="41.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="255.0" text="I Dont Know The Root">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </CheckBox>
+            <Button fx:id="ok" layoutX="116.0" layoutY="116.0" mnemonicParsing="false" onAction="#ok" style="-fx-background-radius: 200;" text="OK">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>
